@@ -1,0 +1,17 @@
+h1{
+    color:brown;
+}
+#username{
+    font-size: 40px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style:italic;
+}
+.person{
+    color:blueviolet;
+}
+button[disabled]{
+    background-color:red;
+}
+body{
+    background-color:pink;
+}
