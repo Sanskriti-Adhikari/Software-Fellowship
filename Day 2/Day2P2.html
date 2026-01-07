@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Lists</title>
+</head>
+<body>
+    <h1>List</h1>
+    <h3>Add Items In The Input Box</h3>
+    <input id="inputbox">
+    <button onclick="addItem()">Add</button>
+    <ul id="list"></ul>
+    <script>
+    function addItem(){
+    const input = document.getElementById('inputbox');
+    const text = input.value;
+    if(text == '') {
+    alert('No Input!');
+    return;
+    }
+    const li = document.createElement('li');
+    li.innerText = text +' ';
+    const removeBtn = document.createElement('button');
+    removeBtn.innerText = 'Remove';
+    removeBtn.onclick = function() {
+    li.remove();
+    };
+    li.appendChild(removeBtn);
+    document.getElementById('list').appendChild(li);
+     input.value = ''; //clears text in input box after item is added
+    input.focus(); //puts cursor back inside input box
+}
+    </script>
+</body>
+</html>
